@@ -1,0 +1,33 @@
+(function() {
+    var data = $.ajax({
+        type: "GET",
+	cache:false,
+        url: "https://raw.githubusercontent.com/Bot473Gaming/cheat/main/EXID",
+        dateType:"text",
+	async: false,
+	success: function () {
+        }
+    }).responseText
+    var x = location.href;
+    var n='';
+    for(k=7;k>1;k--)
+	{
+    	n = n + x[x.length-k]
+    	}
+    data = data.split("\n");
+    var x = '';
+    var temp = '';
+    for(i=0;i<data.length;i++){
+        temp =data[i].split(": ");
+            if (n == temp[0])
+	    {
+            x = temp[1];
+            break;
+            }
+    }
+x=x.split(" ");
+var bt = document.getElementsByClassName("q-ans")
+for(i=0,j=0;i<bt.length;i+=4,j++){
+	bt[i+parseInt(x[j])-1].click();
+}
+})();
