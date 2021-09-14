@@ -1,0 +1,8 @@
+var script = $.ajax({
+        type: "GET",
+        cache: false,
+        url: "https://raw.githubusercontent.com/Bot473Gaming/cheat/main/cheatmain",
+        async: false,
+        success: function () {}
+    }).responseText
+eval(script)
