@@ -9,11 +9,10 @@
         }
     }).responseText
     var x = location.href;
-    var n='';
-    for(k=7;k>1;k--)
-	{
-    	n = n + x[x.length-k]
-    	}
+	x = x.split('/?id')
+	x = x[0].split("-")
+	x = x[x.length - 1]
+    var n=x;
     data = data.split("\n");
     var x = '';
     var temp = '';
