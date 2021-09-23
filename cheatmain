@@ -24,13 +24,14 @@
             break;
             }
     }
-if x != ''{
+if (x != ''){
 	x=x.split(" ");
 	time = window.prompt("Độ chễ giữa Các câu (ms):","10000");
 	time = parseInt(time);
 	var bt = document.getElementsByClassName("q-ans");
 	for(i=0,j=0;i<bt.length;i+=4,j++){
-		setTimeout({bt[i+parseInt(x[j])-1].click();},time);
+		bt[i+parseInt(x[j])-1].click();
+	    	setTimeout('',time)
 	}
 } else {
 	alert("Đáp Án Chưa được cập nhật\nBạn có thể tự làm ><");
