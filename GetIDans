@@ -1,0 +1,12 @@
+var ans_data= JSON.parse($("#data-ans").html());
+var s='';
+var x = location.href;
+x = x.split('/?id')
+x = x[0].split("-")
+x = x[x.length - 1]
+id = x
+for(i=0;i<ans_data.length;i++){
+    s = s+' '+ans_data[i];
+}
+data_id = id+':'+s;
+console.log(data_id)
