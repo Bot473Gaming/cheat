@@ -25,13 +25,40 @@
             }
     }
 if (x != ''){
-	x=x.split(" ");
-	time = window.prompt("Độ chễ giữa Các câu (ms):","10000");
-	time = parseInt(time);
+	x = x.split(' ');
+	sl = x.length;
+	var T = [];
+    	time = window.prompt("Độ chễ giữa các câu (s):","10");
+	point = window.prompt("Số điểm bạn muốn (± ~0.3đ)","10");
+	point = parseFloat(point);
+	time = parseInt(time)*1000;
 	var bt = document.getElementsByClassName("q-ans");
-	for(i=0,j=0;i<bt.length;i+=4,j++){
-		bt[i+parseInt(x[j])-1].click();
-	    	setTimeout('',time)
+	function lamsai(){
+	pertrue = 10 /sl;
+	slsai = sl - (point/pertrue);
+	slsai = Math.round(slsai);
+	for (let i=1;i<slsai;i++){
+	do {
+	a = Math.floor(Math.random() * sl);
+	}while (T.indexOf(a) != -1)
+	T[T.length] = a;
+	temp = x[a];
+	while (x[a]==temp){
+		t = Math.floor(Math.random() * 4)+1;
+		x[a] = t;
+		}
+	}
+	}
+	lamsai();
+	var i = 0;
+	var j = 0;
+	function choose(){
+	bt[i+parseInt(x[j])-1].click();
+	j++;
+	i+=4;
+    }
+	for(var k=0;k<sl;k++){
+	    	setTimeout(choose,time*k)
 	}
 } else {
 	alert("Đáp Án Chưa được cập nhật\nBạn có thể tự làm ><");
