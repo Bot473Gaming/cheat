@@ -1,0 +1,11 @@
+// Lưu ý code này chỉ hoạt động khi đã làm xong bài :3
+// By nameless
+var ans_data= JSON.parse($("#data-ans").html());
+var s = null;
+var ans = ['A','B','C','D','E','F'];
+for(i=0;i<ans_data.length;i++)
+    s = s+' '+ans_data[i];
+s = s.split(' ');
+console.log(s)
+for(i = 1;i<=s.length;i++)
+    console.log("Cau "+(i)+":"+ans[s[i]-1] )
