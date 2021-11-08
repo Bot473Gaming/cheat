@@ -1,3 +1,9 @@
 //code hiện đáp án 
+try {
 var data= JSON.parse($("#user-data").html());
 alert("Your Score : "+data.score);
+} catch{
+var data = (document.getElementsByTagName("script")[15].innerHTML);
+data = data.split("score: ");
+console.log(data[2]);
+}
