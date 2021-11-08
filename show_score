@@ -1,4 +1,4 @@
-//code hiện đáp án 
+//code hiện số điểm
 //By nameless
 try {
   var data= JSON.parse($("#user-data").html());
