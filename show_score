@@ -1,0 +1,3 @@
+//code hiện đáp án 
+var data= JSON.parse($("#user-data").html());
+alert("Your Score : "+data.score);
