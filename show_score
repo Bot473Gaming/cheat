@@ -5,5 +5,5 @@ alert("Your Score : "+data.score);
 } catch{
 var data = (document.getElementsByTagName("script")[15].innerHTML);
 data = data.split("score: ");
-console.log(data[2]);
+alert("Your Score : "+data[2]);
 }
