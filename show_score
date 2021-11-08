@@ -1,9 +1,10 @@
 //code hiện đáp án 
+//By nameless
 try {
-var data= JSON.parse($("#user-data").html());
-alert("Your Score : "+data.score);
+  var data= JSON.parse($("#user-data").html());
+  alert("Your Score : "+data.score);
 } catch{
-var data = (document.getElementsByTagName("script")[15].innerHTML);
-data = data.split("score: ");
-alert("Your Score : "+data[2]);
+  var data = (document.getElementsByTagName("script")[15].innerHTML);
+  data = data.split("score: ");
+  alert("Your Score : "+data[2]);
 }
